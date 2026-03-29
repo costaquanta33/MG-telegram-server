@@ -6,6 +6,7 @@
 const express = require('express');
 const app = express();
 app.use(express.json());
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 // ─── KONFIGURATION ──────────────────────────────────────────
 // Diese Werte in Railway/Render als Environment Variables setzen
